@@ -261,71 +261,24 @@ export default function QuoteModal() {
         </button>
 
         {/* ── Left Side: Image Branding Panel (~55% width) ── */}
-        <div className="flex w-full md:w-[55%] relative flex-col justify-between overflow-hidden bg-white shrink-0 min-h-[380px] md:min-h-0 pt-2 md:pt-0">
+        <div className="flex w-full md:w-[55%] relative flex-col justify-between overflow-hidden bg-slate-900 shrink-0 min-h-[380px] md:min-h-0 pt-2 md:pt-0">
 
-          {/* Background Image Container (Positioned right so products are prominently visible above stats bar) */}
+          {/* Background Image Container */}
           <div className="absolute top-0 right-0 w-full h-full md:h-[calc(100%-72px)] z-0">
             <div
-              className="w-full h-full bg-right-bottom md:bg-right bg-no-repeat bg-[length:150%_auto] md:bg-[length:auto_100%]"
-              style={{ backgroundImage: "url(/form.jpeg)" }}
+              className="w-full h-full bg-cover bg-center bg-no-repeat"
+              style={{ backgroundImage: "url(/popup-bg.jpg)" }}
             />
-            {/* Soft White Fade (Desktop only) strictly on the left text area, preserving full product clarity on right */}
-            <div className="hidden md:block absolute inset-0 bg-gradient-to-r from-white/95 via-white/50 to-transparent w-[50%]" />
-            {/* Mobile soft white fade */}
-            <div className="md:hidden absolute inset-0 bg-white/80" />
+            {/* Subtle Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none" />
           </div>
 
-          {/* Top Content Area - Left-aligned text constrained to ~48% to give spacious room for product images */}
-          <div className="relative z-20 px-6 md:px-8 pt-4 md:pt-8 flex-1 flex flex-col">
-
-            {/* Logo & Subtitle */}
-            <div className="flex items-center gap-3 mb-5 md:mb-6">
-              <img src="/logo.png" alt="Bar Coater Logo" className="h-9 md:h-10 w-auto object-contain" />
-              <div className="text-[9px] text-slate-500 font-bold leading-tight border-l-2 border-slate-300 pl-3 uppercase tracking-wider">
-                Precision Solutions<br />For Coating Industry
-              </div>
-            </div>
-
-            {/* Left-Aligned Headline with exact 4-line breakdown leaving right side for products */}
-            <h2 className="text-[22px] sm:text-[26px] md:text-3xl lg:text-[34px] font-black mb-2 md:mb-3 tracking-tight leading-[1.1] text-slate-800 drop-shadow-sm w-full md:max-w-[48%] z-20 relative text-left">
-              Quality Bar Coaters<br />
-              for a <span className="text-orange-500">Smoother<br /></span>
-              <span className="text-orange-500">Coating Process</span>
-            </h2>
-
-            {/* Line separator */}
-            <div className="w-12 h-1 bg-orange-500 mb-3 md:mb-4 rounded-full z-20 relative" />
-
-            {/* Description */}
-            <p className="text-[11px] lg:text-xs text-slate-600 leading-relaxed font-bold max-w-[85%] md:max-w-[45%] mb-6 md:mb-8 z-20 relative text-left">
-              From testing instruments to precision coating tools, we support your laboratory &amp; packaging process with reliable solutions.
-            </p>
-
-            {/* Horizontal Feature Badges */}
-            <div className="flex gap-4 sm:gap-6 justify-start pb-6 md:pb-0 relative z-20">
-              <div className="flex flex-col items-center text-center">
-                <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center mb-1.5 bg-white shadow-sm text-orange-500">
-                  <CheckCircle2Icon className="w-5 h-5" />
-                </div>
-                <span className="text-[9px] font-bold text-slate-700 leading-tight">
-                  Premium<br />Quality
-                </span>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center mb-1.5 bg-white shadow-sm text-orange-500">
-                  <UsersIcon className="w-5 h-5" />
-                </div>
-                <span className="text-[9px] font-bold text-slate-700 leading-tight">
-                  Technical<br />Support
-                </span>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center mb-1.5 bg-white shadow-sm text-orange-500">
-                  <TruckIcon className="w-5 h-5" />
-                </div>
-                <span className="text-[9px] font-bold text-slate-700 leading-tight">
-                  Pan-India<br />Delivery
-                </span>
+          {/* Top Content Area - Logo Badge Only */}
+          <div className="relative z-20 px-6 pt-6 flex-1 flex flex-col items-start pointer-events-none">
+            <div className="hidden md:inline-flex items-center gap-2.5 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-xl shadow-md border border-white/80">
+              <img src="/logo.png" alt="Logo" className="h-8 w-auto object-contain" />
+              <div className="text-[9px] text-slate-800 font-bold leading-tight border-l-2 border-slate-300 pl-2.5 uppercase tracking-wider text-left">
+                Precision Solutions<br />For Printing Industry
               </div>
             </div>
           </div>
