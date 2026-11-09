@@ -23,7 +23,7 @@ const Navbar = () => {
     { name: "Certifications", href: "/certifications" },
     { name: "Contact Us", href: "/contact" },
     { name: "Blog", href: "/blog" },
-    { name: "Sitemap", href: "/sitemap" },
+    // { name: "Sitemap", href: "/sitemap" },
   ];
 
   const isActive = (href) => {
@@ -201,7 +201,7 @@ const Navbar = () => {
             >
               Blog
             </Link>
-            <Link
+            {/* <Link
               to="/sitemap"
               onClick={scrollToTop}
               className={`flex items-center px-3 py-2 text-sm font-semibold rounded-md transition-colors ${
@@ -211,7 +211,7 @@ const Navbar = () => {
               }`}
             >
               Sitemap
-            </Link>
+            </Link> */}
           </div>
 
           {/* Right Actions */}
@@ -401,7 +401,7 @@ const Navbar = () => {
             >
               Blog
             </Link>
-            <Link
+            {/* <Link
               to="/sitemap"
               onClick={() => {
                 setIsOpen(false);
@@ -414,7 +414,7 @@ const Navbar = () => {
               }`}
             >
               Sitemap
-            </Link>
+            </Link> */}
             <div className="pt-4 mt-2 border-t border-gray-100">
               <button
                 onClick={() => {
